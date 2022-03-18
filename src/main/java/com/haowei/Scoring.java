@@ -10,7 +10,7 @@ public class Scoring {
         //sean.name = "Sean";
         //sean.english = 90;
         //sean.math = 70;
-        GraduateStudent elsa = new GraduateStudent("Elsa");
+        GraduateStudent elsa = new GraduateStudent("Elsa", 100, 70, 65);
         howard.print();
         sean.print();
         elsa.print();
