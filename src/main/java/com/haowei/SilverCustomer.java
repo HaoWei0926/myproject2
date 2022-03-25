@@ -5,7 +5,7 @@ public class SilverCustomer extends Customer {
         super(id, cost);
     }
     public int getReturnMoney(){
-     return (int)(cost*0.1f);
+        return (int)(cost*0.1f);
     }
     public void print(){
         System.out.println(id + "\t" + cost + "\t" + getDiscount() + "\t" + "(" + getReturnMoney() + ")");

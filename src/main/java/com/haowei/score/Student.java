@@ -1,4 +1,4 @@
-package com.haowei;
+package com.haowei.score;
 
 public class Student {
     String name;

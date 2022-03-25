@@ -1,4 +1,4 @@
-package com.haowei;
+package com.haowei.score;
 
 public class ScoringNG {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.haowei;
+package com.haowei.score;
 
 public class GraduateStudent extends Student {
     int thesis;
