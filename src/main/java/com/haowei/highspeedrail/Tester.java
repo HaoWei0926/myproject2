@@ -15,7 +15,7 @@ public class Tester {
                     startStation = Station.TAIPEI;
                     break;
                 case 2:
-                    startStation = Station.TAICHUNG
+                    startStation = Station.TAICHUNG;
                     break;
                 case 3:
                     startStation = Station.KAOHSIUNG;
@@ -37,13 +37,12 @@ public class Tester {
             }
             System.out.println("Which types?" + "/n" + "1.Normal" + "/t" + "2.Student" + "/t" + "3.Elder&Youngers(65 years old above or 135cm below)" + "/t" + "4.Round-Trip");
             //int
-            for (int k = 0; k <3; k++) {
+            for (int j = 0; j < 3; j++) {
 
             }
-            System.out.println("How many tickets?" + "/n" + "1" + "/t" + "2" + "/t" + "3" + "/t" + "4" + "/t" + "5");
-            int times = Integer.parseInt(scanner.next());
-            for (int j = 0; j < times; j++) {
-
+            System.out.println("How many tickets?" + "/n" + "1" + "/t" + "2" + "/t" + "3" + "/t" + "4" + "/t" + "more");
+            int tickets = Integer.parseInt(scanner.next());
+            for (int k = 0; k < tickets; k++) {
             }
         }
     }

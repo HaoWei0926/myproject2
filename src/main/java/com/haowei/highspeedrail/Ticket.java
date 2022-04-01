@@ -11,9 +11,5 @@ public class Ticket {
             this.start = start;
             this.destination = destination;
         }
-        //String start[] = {"Taipei", "Taichung", "Kaohsiung"};
-        //String destination[] = {"Taipei", "Taichung", "Kaohsiung"};
-        //public Ticket(start[0], destination[0], String types, int price){
-        //}
 }
 

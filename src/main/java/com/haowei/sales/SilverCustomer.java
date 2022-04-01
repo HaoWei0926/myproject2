@@ -1,12 +1,15 @@
-package com.haowei;
+package com.haowei.sales;
 
-public class GoldenCustomer extends SilverCustomer{
-    public GoldenCustomer(String id, int cost){
+import com.haowei.sales.Customer;
+
+public class SilverCustomer extends Customer {
+    public SilverCustomer(String id, int cost) {
         super(id, cost);
     }
     public int getReturnMoney(){
-        return (int)(cost*0.1f);
+        return (cost/1000)*100;
     }
+    @Override
     public void print(){
         System.out.println(id + "\t" + cost + "\t" + getDiscount() + "\t" + "(" + getReturnMoney() + ")");
     }
