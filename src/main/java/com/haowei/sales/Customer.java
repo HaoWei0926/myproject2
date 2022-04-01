@@ -1,4 +1,4 @@
-package com.haowei;
+package com.haowei.sales;
 
 public class Customer {
     String id;
@@ -8,7 +8,7 @@ public class Customer {
         this.cost = cost;
     }
     public int getDiscount(){
-        return cost - (cost/1000)*100;
+        return (int)(cost - (cost/1000)*100);
     }
     public void print(){
         System.out.print(id + "\t" + cost + "\t" + getDiscount());

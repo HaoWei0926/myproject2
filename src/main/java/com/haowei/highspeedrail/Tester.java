@@ -1,13 +1,16 @@
 package com.haowei.highspeedrail;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) {
-        Ticket ticket = new Ticket(Station.TAIPEI, Station.TAICHUNG);
+        List<Ticket> ticket = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i <0; i++) {
-            System.out.println("Your start station?" + "/n" + "1.Taipei" + "/t" + "2.Taichung" + "/t" + "3.Kaohsiung");
+        boolean exit = false;
+        while (exit != true) {
+            System.out.println("Your start station?" + "\n" + "1.Taipei" + "\t" + "2.Taichung" + "\t" + "3.Kaohsiung");
             int choice = Integer.parseInt(scanner.next());
             Station startStation = null;
             switch (choice) {
@@ -15,13 +18,13 @@ public class Tester {
                     startStation = Station.TAIPEI;
                     break;
                 case 2:
-                    startStation = Station.TAICHUNG
+                    startStation = Station.TAICHUNG;
                     break;
                 case 3:
                     startStation = Station.KAOHSIUNG;
                     break;
             }
-            System.out.println("Your final station?" + "/n" + "1.Taipei" + "/t" + "2.Taichung" + "/t" + "3.Kaohsiung");
+            System.out.println("Your final station?" + "\n" + "1.Taipei" + "\t"  + "2.Taichung" + "\t" + "3.Kaohsiung");
             choice = Integer.parseInt(scanner.next());
             Station finalStation = null;
             switch (choice) {
@@ -35,17 +38,47 @@ public class Tester {
                     finalStation = Station.KAOHSIUNG;
                     break;
             }
-            System.out.println("Which types?" + "/n" + "1.Normal" + "/t" + "2.Student" + "/t" + "3.Elder&Youngers(65 years old above or 135cm below)" + "/t" + "4.Round-Trip");
-            //int
-            for (int k = 0; k <3; k++) {
-
+            System.out.println("Which types?" + "\n" + "1.Regular" + "\t" + "2.Student" + "\t" + "3.Elders" + "\t" + "4.Round-Trip");
+            choice = Integer.parseInt(scanner.next());
+            System.out.println("How many tickets?");
+            int count = Integer.parseInt(scanner.next());
+            String tp = null;
+            switch (choice){
+                case 1:
+                    tp = "Regular";
+                    Ticket regular = new Ticket(startStation, finalStation, tp, count);
+                    ticket.add(regular);
+                    break;
+                case 2:
+                    tp = "Student";
+                    Student student = new Student(startStation, finalStation, tp, count);
+                    ticket.add(student);
+                    break;
+                case 3:
+                    tp = "Elders";
+                    Elders elders = new Elders(startStation, finalStation, tp, count);
+                    ticket.add(elders);
+                    break;
+                case 4:
+                    tp = "Round-Trip";
+                    RoundTrip roundtrip = new RoundTrip(startStation, finalStation, tp, count);
+                    ticket.add(roundtrip);
+                    break;
             }
-            System.out.println("How many tickets?" + "/n" + "1" + "/t" + "2" + "/t" + "3" + "/t" + "4" + "/t" + "5");
-            int times = Integer.parseInt(scanner.next());
-            for (int j = 0; j < times; j++) {
-
+            System.out.println("Continue?" + "\n" + "1.Yes" + "\t" + "2.No");
+            int options = Integer.parseInt(scanner.next());
+            if (options == 1) {
+                exit = false;
+            } else if (options == 2) {
+                exit = true;
             }
         }
+        for (Ticket t : ticket) {
+            t.print();
+        }
+        System.out.println("Thank you for buying.");
     }
 }
+
+
 
