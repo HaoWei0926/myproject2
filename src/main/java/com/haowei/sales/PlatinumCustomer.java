@@ -5,11 +5,11 @@ public class PlatinumCustomer extends GoldenCustomer{
         super(id,cost);
     }
     @Override
-    public int getDiscount(){
+    public int getDiscount() {
         return (int)(cost*0.7f);
     }
     @Override
-    public int getReturnMoney(){
+    public int getReturnMoney() {
             return (int)(cost*0.2f);
     }
     @Override

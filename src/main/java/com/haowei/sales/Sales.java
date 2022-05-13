@@ -16,10 +16,12 @@ public class Sales {
         customers.add(new SilverCustomer("0003", 2000));
         customers.add(new GoldenCustomer("0004",3200));
         customers.add(new PlatinumCustomer("0005",4500));
-
         for (Customer p : customers) {
             p.print();
         }
+
+        Customer c = customers.get(4);
+        System.out.println(c instanceof PlatinumCustomer);
 
         Customer p1 = new Customer("0001", 1200);
         Customer p2 = new Customer("0002", 800);

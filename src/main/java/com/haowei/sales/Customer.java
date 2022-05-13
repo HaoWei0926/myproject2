@@ -7,10 +7,10 @@ public class Customer {
         this.id = id;
         this.cost = cost;
     }
-    public int getDiscount(){
+    public int getDiscount() {
         return (int)(cost - (cost/1000)*100);
     }
-    public void print(){
+    public void print() {
         System.out.print(id + "\t" + cost + "\t" + getDiscount());
         System.out.println();
     }
