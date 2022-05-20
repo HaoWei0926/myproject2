@@ -6,8 +6,8 @@ import java.util.Date;
 public class Runner {
     public static void main(String[] args) {
         String id = "ABC-1234";
-        String enterTime = "08:00";
-        String leaveTime = "11:00";
+        String enterTime = "09:45";
+        String leaveTime = "15:48";
         //Date d = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
         Date d = null;
@@ -25,6 +25,9 @@ public class Runner {
             long ms = d2.getTime() - d.getTime();
             int minutes = (int)(ms/(1000*60));
             System.out.println(minutes);
+            int hours = (minutes+30)/60;
+            System.out.println(30*hours);
+            //不滿
         } catch (Exception e) {
             System.out.println("Wrong Format");
         }

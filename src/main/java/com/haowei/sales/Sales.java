@@ -33,5 +33,8 @@ public class Sales {
         p3.print();
         p4.print();
         p5.print();
+
+        MyClass mc = new MyClass();
+        mc.print();
     }
 }
